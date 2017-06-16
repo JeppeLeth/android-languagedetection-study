@@ -13,7 +13,10 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
 
-@TargetApi(Build.VERSION_CODES.M)
+/**
+ * Detection of language using {@link android.view.textclassifier.TextClassificationManager}
+ */
+@TargetApi(26)
 public class DetectionTextClassifier extends AsyncTask<String, Void, DetectionResult> {
 
     private static Class<?> txtClassifClzz;

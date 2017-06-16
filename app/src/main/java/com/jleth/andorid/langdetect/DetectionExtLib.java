@@ -10,6 +10,9 @@ import com.cybozu.labs.langdetect.DetectorFactory;
 
 import java.util.ArrayList;
 
+/**
+ * Detection of language using {@link Detector}
+ */
 public class DetectionExtLib extends AsyncTask<String, Void, DetectionResult> {
 
     @Override
