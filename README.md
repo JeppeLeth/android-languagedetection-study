@@ -22,6 +22,16 @@ For the Android O preview there was a feature announced to improve TTS (Text-To-
  
 It seems that using the TextClassificationManager has no overhead, though it needs at least 5 words in a string to be able to detect any language probability.
 
+The original feature [description](https://developer.android.com/preview/api-overview.html?hl=ja#a11y) was
+
+    Accessibility function
+    
+    Language Detection
+    To identify the language of your choice within the text range specified by the text-to-speech (TTS) tool,
+    TextClassificationManager.detectLanguages()use. This method is TextClassificationManagerincluded in the class introduced in
+    Android O android.view.textclassifier.TextLanguageYou can use the object's result list to identify the range 
+    of text assigned to a particular language and how TTS assigned the language to a particular subset of text.
+
 ### Sample code
 
 Usage of the modified Java library is shown in [DetectionExtLib](/app/src/main/java/com/jleth/andorid/langdetect/DetectionExtLib.java) and access to the TextClassificationManager on Android O is shown in  [DetectionTextClassifier](/app/src/main/java/com/jleth/andorid/langdetect/DetectionTextClassifier.java).
