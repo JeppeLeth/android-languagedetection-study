@@ -1,7 +1,7 @@
 # Language detection for Android
 
 This sample shows a proof-of-concept application, that can detect language/locale from text snippets.
-There are several online services ([1](https://azure.microsoft.com/en-us/services/cognitive-services/translator-text-api/?v=17.23h) [2](https://cloud.google.com/translate/docs/) [3](https://detectlanguage.com/) ), but on-device detection is preferred on most cases because of cost and privacy.
+There are several online services ([1](https://azure.microsoft.com/en-us/services/cognitive-services/translator-text-api/?v=17.23h) [2](https://cloud.google.com/translate/docs/) [3](https://detectlanguage.com/)), but on-device detection is preferred on most cases because of cost and privacy.
 
 ### Library solution
 
@@ -47,6 +47,27 @@ The code is slow to build (2-10 minutes) because of the large files in the lib m
 * Could limit the “detection” to be only messages with more than 2-5 words
 * Will match 90% of sentences. More accuracy is unlikely
 
+### Examples
+
+Output from JUnit test of DetectionExtLib.java
+
+| Desc | println | Desc | println |
+| --- | --- | --- | --- |
+| TEXT | `d r ligemeget` | PROB | `[tl:0.9999951075554466]` |
+| PROB | `[da:0.9999965798529784]` | TEXT | `Wie geths` |
+| TEXT | `Oh nee die is best slecht` | PROB | `[de:0.9999964124956877]` |
+| PROB | `[nl:0.8571375332115239, de:0.1428613482712434]` | TEXT | `Come 2 u or me` |
+| TEXT | `Hello there` | PROB | `[pt:0.9999936502079427]` |
+| PROB | `[en:0.9999978942007692]` | TEXT | `new invoice` |
+| TEXT | `jeg r på vej` | PROB | `[en:0.9999955920839266]` |
+| PROB | `[no:0.7142821787613173, da:0.28571782123868267]` | TEXT | `har du gået med hunden` |
+| TEXT | `Min computer virker ikke!!!` | PROB | `[da:0.999993160438744]` |
+| PROB | `[da:0.716716473458616, no:0.283283526541384]` | TEXT | `har købt en ny laptop` |
+| TEXT | `Why did you do that` | PROB | `[da:0.9999934411218343]` |
+| PROB | `[en:0.9999979280002544]` | TEXT | `😊` |
+| TEXT | `Jabra` | PROB | `[he:0.9999951107521816]` |
+| PROB | `[lv:0.9999958637019545]` | TEXT | `Vielen dank für die Blumen` |
+| TEXT | `Go away` | PROB | `[de:0.9999959193169594]` |
 
 ## References
 
